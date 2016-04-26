@@ -12,7 +12,7 @@ import ManifestPlugin from '../manifest/plugin'
 var styleLoaders = {
   'css': '',
   // 'less': '!less-loader',
-  // 'scss|sass': '!sass-loader',
+  'scss|sass': '!sass-loader',
   // 'styl': '!stylus-loader'
 };
 
