@@ -1,6 +1,26 @@
-p {
-  span {
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-}
+@import "bootstrap_variables";
+
+/**
+ * Bootstrap variables override
+ * NB: you can also override the varialbes in bootstrap_variables.scss
+ */
+$brand-primary:         #5696FA !default; // #337ab7
+$brand-success:         #2ecc71 !default;
+$brand-info:            #4aa3df !default;
+$brand-warning:         #FF9D00 !default;
+$brand-danger:          #e74c3c !default;
+// Import bootstrap
+@import "bootstrap";
+
+
+/**
+ * --- My app ---
+ */
+// Variables
+@import "variables";
+
+// My other stuff
+@import "myapp/layout";
+//@import "myapp/widget";
+//@import "myapp/buttons";
+//...
