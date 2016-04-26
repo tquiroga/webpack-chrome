@@ -1,4 +1,5 @@
 // Native
+import path from 'path'
 import fs from 'fs-extra';
 import { exec } from 'child_process'
 
@@ -14,6 +15,15 @@ import * as paths from './paths'
 // Clear release direcotry
 fs.removeSync(paths.release)
 fs.mkdirSync(paths.release)
+
+// Copy the locales directory
+fs.copy(path.join(paths.src, "_locales"), path.join(paths.build, "_locales"), function (err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log("Copy _locales: success!");
+  }
+});
 
 // Create manifest
 const manifest = new Manifest({manifest: paths.manifest, build: paths.build})

@@ -1,30 +1,39 @@
 {
+  "name": "MyAPP",
+  "version": "0.0.1",
   "manifest_version": 2,
-  "homepage_url": "https://github.com/schovi/webpack-chrome-extension",
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content/index.js"]
-    }
-  ],
+  "description": "Luseed provides your team with a fast and easy way to share activity progress, ideas and moods. It encourages open communication which improves efficiency, trust and confidence within your team.",
+  "homepage_url": "https://myapp.com",
+  "icons": {
+    "16": "icons/webpack-16.png",
+    "32": "icons/webpack-32.png",
+    "128": "icons/webpack-128.png"
+  },
+  "default_locale": "en",
   "background": {
     "persistent": true,
     "scripts": ["background/index.js"]
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab/index.html"
   },
   "page_action": {
     "default_title": "Webpack chrome extension popup action",
     "default_popup": "popup/index.html"
   },
-  "chrome_url_overrides" : {
-    "newtab": "newtab/index.html"
-  },
   "permissions": [
     "background",
-    "tabs"
+    "clipboardRead",
+    "clipboardWrite",
+    "cookies",
+    "idle",
+    "notifications",
+    "tabs",
+    "geolocation",
+    "https://myapp.com/*"
   ],
-  "icons": {
-    "16": "icons/webpack-16.png",
-    "32": "icons/webpack-32.png",
-    "128": "icons/webpack-128.png"
-  }
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content/index.js"]
+  }]
 }

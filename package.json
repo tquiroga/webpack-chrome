@@ -22,6 +22,7 @@
     "hmr"
   ],
   "dependencies": {
+    "fs-extra": "^0.28.0",
     "react": "0.14.7"
   },
   "devDependencies": {
@@ -37,7 +38,6 @@
     "css-loader": "0.23.1",
     "express": "4.13.4",
     "file-loader": "0.8.5",
-    "fs-extra": "0.26.5",
     "json-loader": "0.5.4",
     "lodash": "4.1.0",
     "style-loader": "0.13.0",

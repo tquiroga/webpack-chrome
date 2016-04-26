@@ -93,6 +93,9 @@ You should do this before editing any code to see how it works.
 1. Everything looks fine, but scripts from webpack arent loading.
   - Probably problem with development ssl certificates. Open any script (i.e. https://localhost:3001/background/index.js) in separate tab and allow chrome to load it anyway. Then reload extension.
 
+2. load unpack extension from build folder, inspect background page: https://localhost:3001/background/index.js Failed to load resource: net::ERR_INSECURE_RESPONSE
+  - Open https://localhost:3001/background/index.js in a new tab and click advanced security option "proceed anyway"
+
 ## TODO
 
 #### Done

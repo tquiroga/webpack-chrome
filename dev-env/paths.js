@@ -6,6 +6,8 @@ export const packageJson = path.normalize(path.join(root, "package.json"))
 
 export const src = path.normalize(path.join(root, "src"))
 
+export const locales = path.normalize(path.join(root, "_locales"))
+
 export const release = path.normalize(path.join(root, "release"))
 
 export const build = process.env.NODE_ENV == "development"
